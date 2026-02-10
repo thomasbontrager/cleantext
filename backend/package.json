@@ -1,5 +1,5 @@
 {
-  "name": "cleantext-backend",
+  "name": "textwash-backend",
   "version": "1.0.0",
   "description": "TextWash SaaS Backend",
   "main": "dist/server.js",

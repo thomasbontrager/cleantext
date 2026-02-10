@@ -24,7 +24,7 @@ Professional text cleaning with AI features. 100% local processing, no tracking.
 ## 📁 Project Structure
 
 ```
-cleantext/
+textwash/
 ├── index.html              # Multi-page SPA
 ├── style.css               # Dark SaaS theme
 ├── app.js                  # Frontend logic (auth, routing, subscriptions)
@@ -63,7 +63,7 @@ npm run prisma:generate
 
 Create `.env` file:
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/cleantext
+DATABASE_URL=postgresql://user:password@localhost:5432/textwash
 JWT_SECRET=your-super-secret-key-min-32-characters
 NODE_ENV=development
 PORT=3000
@@ -73,7 +73,7 @@ STRIPE_PUBLISHABLE_KEY=pk_test_xxxxx
 STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 
 SENDGRID_API_KEY=SG.xxxxx (optional)
-ADMIN_EMAIL=admin@cleantext.app
+ADMIN_EMAIL=admin@textwash.app
 
 FRONTEND_URL=http://localhost:3001
 ```
@@ -82,7 +82,7 @@ FRONTEND_URL=http://localhost:3001
 
 ```bash
 # Create PostgreSQL database
-createdb cleantext
+createdb textwash
 
 # Run migrations
 npm run prisma:migrate
@@ -123,13 +123,13 @@ Frontend runs on `http://localhost:3001`
 
 ### 2. Create Products in Stripe Dashboard
 
-**Product 1: CleanText Starter**
+**Product 1: TextWash Starter**
 - Recurring billing
 - Yearly interval
 - 14-day trial
 - Price: $29
 
-**Product 2: CleanText Pro**
+**Product 2: TextWash Pro**
 - Recurring billing
 - Yearly interval
 - 14-day trial
@@ -148,7 +148,7 @@ Create a user with ADMIN role:
 INSERT INTO "User" (id, email, "passwordHash", role, "createdAt", "updatedAt")
 VALUES (
   'unique-uuid',
-  'admin@cleantext.app',
+  'admin@textwash.app',
   '$2a$12$...hash',
   'ADMIN',
   NOW(),

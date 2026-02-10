@@ -1,4 +1,7 @@
 {
+  "name": "textwash",
+  "version": "1.0.0",
+  "description": "TextWash - Professional text cleaning with AI features",
   "dependencies": {
     "@stripe/stripe-js": "^8.7.0"
   }
